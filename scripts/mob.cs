@@ -14,6 +14,11 @@ public partial class mob : CharacterBody3D
     }
 
     public void Initialize(Vector3 startPosition, Vector3 playerPosition) {
+        
+        LookAtFromPosition(startPosition, playerPosition, Vector3.Up);
+        
+
+        RotateY((float)GD.RandRange(-Mathf.Pi / 4.0, Mathf.Pi / 4.0));
         int randomSpeed = GD.RandRange(MinSpeed, MaxSpeed);
 
         Velocity = Vector3.Forward * randomSpeed;

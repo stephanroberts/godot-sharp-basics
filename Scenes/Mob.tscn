@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://digrtfmryjfp2"]
 
-[ext_resource type="Script" path="res://Scenes/mob.cs" id="1_omc7a"]
 [ext_resource type="PackedScene" uid="uid://drf0l6fulf7cg" path="res://art/mob.glb" id="1_v65vu"]
+[ext_resource type="Script" path="res://scripts/mob.cs" id="1_wwa3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjdn7"]
 size = Vector3(2.26394, 1.29976, 2.39896)
 
 [node name="Mob" type="CharacterBody3D"]
-script = ExtResource("1_omc7a")
+script = ExtResource("1_wwa3c")
 
 [node name="Pivot" type="Node3D" parent="."]
 

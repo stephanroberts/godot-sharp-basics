@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694636292
+::res://::1694640519
 default_bus_layout.tres::AudioBusLayout::-1::1694618410::0::1::::<><>::
 default_env.tres::Environment::-1::1694618410::0::1::::<><>::
 icon.png::CompressedTexture2D::2472452046071128454::1606009720::1694636293::1::::<><>::
 README.md::TextFile::-1::1694624704::0::1::::<><>::
-::res://art/::1694618437
+::res://art/::1694636293
 body.material::StandardMaterial3D::-1::1605908508::0::1::::<><>::
 eye.material::StandardMaterial3D::-1::1606514142::0::1::::<><>::
 House In a Forest Loop.ogg::AudioStreamOggVorbis::2208727353204585952::1580874009::1694636293::1::::<><>::
@@ -13,14 +13,15 @@ mob_body.material::StandardMaterial3D::-1::1606514142::0::1::::<><>::
 mob_eye.material::StandardMaterial3D::-1::1605969815::0::1::::<><>::
 player.glb::PackedScene::8759053738179996705::1606514058::1694636293::1::::<><>::
 pupil.material::StandardMaterial3D::-1::1606514142::0::1::::<><>::
-::res://fonts/::1694618436
+::res://fonts/::1694636293
 LICENSE.txt::TextFile::-1::1605988452::0::1::::<><>::
 Montserrat-Medium.ttf::FontFile::5943939670663640138::1323702000::1694636293::1::::<><>::
-::res://Levels/::1694625428
-main.tscn::PackedScene::8863121907544236963::1694625428::0::1::::<><>::uid://de6g53pr171io::::res://Scenes/player.tscn
-::res://Scenes/::1694625428
-mob.cs::CSharpScript::-1::1694625888::0::1::::<><>::
-mob.tscn::PackedScene::7734225467628381845::1694625428::0::1::::<><>::res://Scenes/mob.cs<>uid://drf0l6fulf7cg::::res://art/mob.glb
-player.cs::CSharpScript::-1::1694635851::0::1::::<><>::
-player.tscn::PackedScene::7504432506415336710::1694625428::0::1::::<><>::res://Scenes/player.cs<>uid://dw17lnw0x2mw4::::res://art/player.glb
-::res://scripts/::1694621936
+::res://Levels/::1694641362
+main.tscn::PackedScene::8863121907544236963::1694641362::0::1::::<><>::uid://de6g53pr171io::::res://Scenes/Player.tscn<>res://scripts/main.cs<>uid://digrtfmryjfp2::::res://Scenes/Mob.tscn
+::res://Scenes/::1694641362
+Mob.tscn::PackedScene::7734225467628381845::1694641361::0::1::::<><>::res://scripts/Mob.cs<>uid://drf0l6fulf7cg::::res://art/mob.glb
+Player.tscn::PackedScene::7504432506415336710::1694641362::0::1::::<><>::res://scripts/Player.cs<>uid://dw17lnw0x2mw4::::res://art/player.glb
+::res://scripts/::1694641419
+Main.cs::CSharpScript::-1::1694641202::0::1::::<><>::
+Mob.cs::CSharpScript::-1::1694641041::0::1::::<><>::
+Player.cs::CSharpScript::-1::1694641391::0::1::::<><>::

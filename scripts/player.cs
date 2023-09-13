@@ -13,7 +13,7 @@ public partial class player : CharacterBody3D
     public override void _PhysicsProcess(double delta)
     {
         var direction = Vector3.Zero;
-		
+
 		if (Input.IsActionPressed("moveRight")) {
 			direction.X += 1.0f;
 		}
@@ -42,5 +42,18 @@ public partial class player : CharacterBody3D
 		Velocity = _targetVelocity;
 
 		MoveAndSlide();
+    }
+}
+
+internal record struct NewStruct(object Item1, object Item2)
+{
+    public static implicit operator (object, object)(NewStruct value)
+    {
+        return (value.Item1, value.Item2);
+    }
+
+    public static implicit operator NewStruct((object, object) value)
+    {
+        return new NewStruct(value.Item1, value.Item2);
     }
 }
