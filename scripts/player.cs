@@ -6,7 +6,14 @@ public partial class player : CharacterBody3D
 	[Export]
 	public int Speed {get; set; } = 14;
 	[Export]
-	public int FallAcceleration { get; set; } = 75;
+	public int FallAcceleration { get; set; } = 1;
+	[Export]
+	public int JumpImpulse { get; set; } = 50;
+	[Export]
+	public int BounceImpulse { get; set; } = 30;
+
+	[Signal]
+	public delegate void HitEventHandler();
 
 	private Vector3 _targetVelocity = Vector3.Zero;
 
@@ -36,24 +43,39 @@ public partial class player : CharacterBody3D
 		_targetVelocity.Z = direction.Z * Speed;
 
 		if(!IsOnFloor()) {
-			_targetVelocity.Y -= FallAcceleration * Speed;
+			_targetVelocity.Y -= FallAcceleration * (Speed / 3);
+		}
+
+		if (IsOnFloor() && Input.IsActionJustPressed("jump")) {
+			_targetVelocity.Y = JumpImpulse;
+        }
+
+		for (int index = 0; index < GetSlideCollisionCount(); index++)
+		{
+			KinematicCollision3D collision = GetSlideCollision(index);
+
+			if (collision.GetCollider() is mob mob)
+			{
+				if (Vector3.Up.Dot(collision.GetNormal()) > 0.1f)
+				{
+					mob.Squash();
+					_targetVelocity.Y = BounceImpulse;
+				}
+			}
 		}
 
 		Velocity = _targetVelocity;
 
+
 		MoveAndSlide();
     }
-}
 
-internal record struct NewStruct(object Item1, object Item2)
-{
-    public static implicit operator (object, object)(NewStruct value)
-    {
-        return (value.Item1, value.Item2);
-    }
+	private void Die() {
+		EmitSignal(SignalName.Hit);
+		QueueFree();
+	}
 
-    public static implicit operator NewStruct((object, object) value)
-    {
-        return new NewStruct(value.Item1, value.Item2);
-    }
+	public void OnMobDetectorBodyEntered(Node3D body) {
+		Die();
+	}
 }
