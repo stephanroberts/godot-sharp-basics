@@ -18,6 +18,9 @@ public partial class main : Node
         if (@event.IsActionPressed("jump") && GetNode<Control>("UserInterface/Retry").Visible) {
             GetTree().ReloadCurrentScene();
         }
+        if (@event.IsActionPressed("ui_cancel")) {
+            GetTree().Quit();
+        }
     }
     public void OnMobTimerTimeout() {
         mob mob = MobScene.Instantiate<mob>();
