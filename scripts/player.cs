@@ -37,6 +37,9 @@ public partial class player : CharacterBody3D
 		if (direction != Vector3.Zero) {
 			direction = direction.Normalized();
 			GetNode<Node3D>("Pivot").LookAt(Position + direction, Vector3.Up);
+			GetNode<AnimationPlayer>("AnimationPlayer").SpeedScale = 4;
+		} else {
+			GetNode<AnimationPlayer>("AnimationPlayer").SpeedScale = 1;
 		}
 
 		_targetVelocity.X = direction.X * Speed;
@@ -68,6 +71,9 @@ public partial class player : CharacterBody3D
 
 
 		MoveAndSlide();
+
+		var pivot = GetNode<Node3D>("Pivot");
+		pivot.Rotation = new Vector3(Mathf.Pi / 6.0f * Velocity.Y / JumpImpulse, pivot.Rotation.Y, pivot.Rotation.Z);
     }
 
 	private void Die() {

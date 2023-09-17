@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694812765
+::res://::1694963014
 default_bus_layout.tres::AudioBusLayout::-1::1694618410::0::1::::<><>::
 default_env.tres::Environment::-1::1694618410::0::1::::<><>::
 icon.png::CompressedTexture2D::2472452046071128454::1606009720::1694636293::1::::<><>::
@@ -16,13 +16,14 @@ pupil.material::StandardMaterial3D::-1::1606514142::0::1::::<><>::
 ::res://fonts/::1694636293
 LICENSE.txt::TextFile::-1::1605988452::0::1::::<><>::
 Montserrat-Medium.ttf::FontFile::5943939670663640138::1323702000::1694636293::1::::<><>::
-::res://Levels/::1694812398
-Main.tscn::PackedScene::8863121907544236963::1694812398::0::1::::<><>::res://scripts/main.cs<>uid://digrtfmryjfp2::::res://Scenes/Mob.tscn<>uid://de6g53pr171io::::res://Scenes/Player.tscn<>uid://cqxj22s6hk56u::::res://fonts/Montserrat-Medium.ttf<>res://scripts/ScoreLabel.cs
-::res://Scenes/::1694812297
-Mob.tscn::PackedScene::7734225467628381845::1694812297::0::1::::<><>::uid://drf0l6fulf7cg::::res://art/mob.glb<>res://scripts/mob.cs
-Player.tscn::PackedScene::7504432506415336710::1694812297::0::1::::<><>::uid://dw17lnw0x2mw4::::res://art/player.glb<>res://scripts/player.cs
+::res://Levels/::1694813981
+Main.tscn::PackedScene::8863121907544236963::1694813981::0::1::::<><>::res://scripts/main.cs<>uid://digrtfmryjfp2::::res://Scenes/Mob.tscn<>uid://de6g53pr171io::::res://Scenes/Player.tscn<>uid://cqxj22s6hk56u::::res://fonts/Montserrat-Medium.ttf<>res://scripts/ScoreLabel.cs
+::res://Scenes/::1694813981
+Mob.tscn::PackedScene::7734225467628381845::1694813981::0::1::::<><>::uid://drf0l6fulf7cg::::res://art/mob.glb<>res://scripts/mob.cs
+MusicPlayer.tscn::PackedScene::2835665969931844477::1694813981::0::1::::<><>::uid://6p6of3h1e233::::res://art/House In a Forest Loop.ogg
+Player.tscn::PackedScene::7504432506415336710::1694813981::0::1::::<><>::uid://dw17lnw0x2mw4::::res://art/player.glb<>res://scripts/player.cs
 ::res://scripts/::1694812329
-main.cs::CSharpScript::-1::1694812752::0::1::::<><>::
+main.cs::CSharpScript::-1::1694813335::0::1::::<><>::
 mob.cs::CSharpScript::-1::1694812688::0::1::::<><>::
 player.cs::CSharpScript::-1::1694811713::0::1::::<><>::
 ScoreLabel.cs::CSharpScript::-1::1694812559::0::1::::<><>::
